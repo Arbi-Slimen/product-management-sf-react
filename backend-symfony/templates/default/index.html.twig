@@ -1,0 +1,272 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}README{% endblock %}
+
+{% block body %}
+    <div data-target="readme-toc.content" class="Box-body px-5 pb-5">
+        <article class="markdown-body entry-content container-lg" itemprop="text">
+            <h2 dir="auto"><a id="user-content-table-of-contents" class="anchor" aria-hidden="true"
+                              href="#table-of-contents">
+                    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                         aria-hidden="true">
+                        <path fill-rule="evenodd"
+                              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+                    </svg>
+                </a>Table of Contents
+            </h2>
+            <ol dir="auto">
+                <li><a href="#general-info">General Info</a></li>
+                <li><a href="#technologies">Technologies</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ol>
+            <h2 dir="auto"><a id="user-content-general-info" class="anchor" aria-hidden="true" href="#general-info">
+                    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                         aria-hidden="true">
+                        <path fill-rule="evenodd"
+                              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+                    </svg>
+                </a>General Info
+            </h2>
+            <p dir="auto">The objective is to implement a REST API that manages a product catalog.</p>
+            <p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow"
+                             href="https://camo.githubusercontent.com/53150a622148e8caf04d4669e815d1f854cec385ef5c0a4cd90124c2c60c1a88/68747470733a2f2f7777772e6174732d6469676974616c2e636f6d2f77702d636f6e74656e742f7468656d65732f6174732d6469676974616c2d7468656d652f7468656d652f696d616765732f6c6f676f732f4c6f676f2d542e706e67"><img
+                            src="https://camo.githubusercontent.com/53150a622148e8caf04d4669e815d1f854cec385ef5c0a4cd90124c2c60c1a88/68747470733a2f2f7777772e6174732d6469676974616c2e636f6d2f77702d636f6e74656e742f7468656d65732f6174732d6469676974616c2d7468656d652f7468656d652f696d616765732f6c6f676f732f4c6f676f2d542e706e67"
+                            alt="Image text"
+                            data-canonical-src="https://www.ats-digital.com/wp-content/themes/ats-digital-theme/theme/images/logos/Logo-T.png"
+                            style="max-width: 100%;"></a></p>
+            <h2 dir="auto"><a id="user-content-technologies" class="anchor" aria-hidden="true" href="#technologies">
+                    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                         aria-hidden="true">
+                        <path fill-rule="evenodd"
+                              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+                    </svg>
+                </a>Technologies
+            </h2>
+            <p dir="auto">The project consists of two parts :</p>
+            <ol dir="auto">
+                <li>The Back-end part is developed with the framework Symfony version 4.4 that implements the RSET
+                    API.
+                </li>
+                <li>The Front-end part is developed with React.js version 18 that implements the views powered by REST
+                    API.
+                </li>
+            </ol>
+            <h2 dir="auto"><a id="user-content-installation" class="anchor" aria-hidden="true" href="#installation">
+                    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                         aria-hidden="true">
+                        <path fill-rule="evenodd"
+                              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+                    </svg>
+                </a>Installation
+            </h2>
+            <div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>$ git clone https://github.com/Arbi-Slimen/PROJECT-ATS-DIGITAL.git
+</code></pre>
+                <div class="zeroclipboard-container position-absolute right-0 top-0">
+                    <clipboard-copy aria-label="Copy"
+                                    class="ClipboardButton btn js-clipboard-copy m-2 p-0 tooltipped-no-delay"
+                                    data-copy-feedback="Copied!" data-tooltip-direction="w"
+                                    value="$ git clone https://github.com/Arbi-Slimen/PROJECT-ATS-DIGITAL.git"
+                                    tabindex="0" role="button">
+                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                             data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon m-2">
+                            <path fill-rule="evenodd"
+                                  d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                            <path fill-rule="evenodd"
+                                  d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                        </svg>
+                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                             data-view-component="true"
+                             class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none m-2">
+                            <path fill-rule="evenodd"
+                                  d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path>
+                        </svg>
+                    </clipboard-copy>
+                </div>
+            </div>
+            <ol dir="auto">
+                <li>The Back-end part with Symfony.</li>
+            </ol>
+            <div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>$ cd backend-symfony
+$ composer update
+$ php bin/console doctrine:schema:update --force
+$ php bin/console server:start
+</code></pre>
+                <div class="zeroclipboard-container position-absolute right-0 top-0">
+                    <clipboard-copy aria-label="Copy"
+                                    class="ClipboardButton btn js-clipboard-copy m-2 p-0 tooltipped-no-delay"
+                                    data-copy-feedback="Copied!" data-tooltip-direction="w" value="$ cd backend-symfony
+$ composer update
+$ php bin/console doctrine:schema:update --force
+$ php bin/console server:start" tabindex="0" role="button">
+                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                             data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon m-2">
+                            <path fill-rule="evenodd"
+                                  d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                            <path fill-rule="evenodd"
+                                  d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                        </svg>
+                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                             data-view-component="true"
+                             class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none m-2">
+                            <path fill-rule="evenodd"
+                                  d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path>
+                        </svg>
+                    </clipboard-copy>
+                </div>
+            </div>
+            <p dir="auto">Access the application with the URL <a href="http://localhost:8000" rel="nofollow">http://localhost:8000</a>.
+            </p>
+            <ol start="2" dir="auto">
+                <li>The Front-end part with React.js.</li>
+            </ol>
+            <div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>$ cd frontend-react
+$ npm install
+$ npm start
+</code></pre>
+                <div class="zeroclipboard-container position-absolute right-0 top-0">
+                    <clipboard-copy aria-label="Copy"
+                                    class="ClipboardButton btn js-clipboard-copy m-2 p-0 tooltipped-no-delay"
+                                    data-copy-feedback="Copied!" data-tooltip-direction="w" value="$ cd frontend-react
+$ npm install
+$ npm start" tabindex="0" role="button">
+                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                             data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon m-2">
+                            <path fill-rule="evenodd"
+                                  d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                            <path fill-rule="evenodd"
+                                  d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                        </svg>
+                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                             data-view-component="true"
+                             class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none m-2">
+                            <path fill-rule="evenodd"
+                                  d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path>
+                        </svg>
+                    </clipboard-copy>
+                </div>
+            </div>
+            <p dir="auto">Access the application with the URL <a href="http://localhost:3000" rel="nofollow">http://localhost:3000</a>.
+            </p>
+            <h2 dir="auto"><a id="user-content-usage" class="anchor" aria-hidden="true" href="#usage">
+                    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                         aria-hidden="true">
+                        <path fill-rule="evenodd"
+                              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+                    </svg>
+                </a>Usage
+            </h2>
+            <p dir="auto">REST API endpoints :</p>
+            <ol dir="auto">
+                <li>Import the products list into the database.</li>
+            </ol>
+            <div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>POST /api/products
+</code></pre>
+                <div class="zeroclipboard-container position-absolute right-0 top-0">
+                    <clipboard-copy aria-label="Copy"
+                                    class="ClipboardButton btn js-clipboard-copy m-2 p-0 tooltipped-no-delay"
+                                    data-copy-feedback="Copied!" data-tooltip-direction="w" value="POST /api/products"
+                                    tabindex="0" role="button">
+                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                             data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon m-2">
+                            <path fill-rule="evenodd"
+                                  d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                            <path fill-rule="evenodd"
+                                  d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                        </svg>
+                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                             data-view-component="true"
+                             class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none m-2">
+                            <path fill-rule="evenodd"
+                                  d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path>
+                        </svg>
+                    </clipboard-copy>
+                </div>
+            </div>
+            <ol start="2" dir="auto">
+                <li>Return products list based on pagination and filters.</li>
+            </ol>
+            <div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>GET /api/products
+
+pagination: page     // default value 1
+            limit    // default value 12
+
+filters:    productName
+            category
+            price    //price higher than the input
+
+example: GET http://localhost:8000/api/products?page=1&amp;limit=10&amp;productName=Chicken&amp;category=Fantastic&amp;price=200
+</code></pre>
+                <div class="zeroclipboard-container position-absolute right-0 top-0">
+                    <clipboard-copy aria-label="Copy"
+                                    class="ClipboardButton btn js-clipboard-copy m-2 p-0 tooltipped-no-delay"
+                                    data-copy-feedback="Copied!" data-tooltip-direction="w" value="GET /api/products
+
+pagination: page     // default value 1
+            limit    // default value 12
+
+filters:    productName
+            category
+            price    //price higher than the input
+
+example: GET http://localhost:8000/api/products?page=1&amp;limit=10&amp;productName=Chicken&amp;category=Fantastic&amp;price=200"
+                                    tabindex="0" role="button">
+                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                             data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon m-2">
+                            <path fill-rule="evenodd"
+                                  d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                            <path fill-rule="evenodd"
+                                  d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                        </svg>
+                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                             data-view-component="true"
+                             class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none m-2">
+                            <path fill-rule="evenodd"
+                                  d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path>
+                        </svg>
+                    </clipboard-copy>
+                </div>
+            </div>
+            <ol start="3" dir="auto">
+                <li>Return the detailed product sheet.</li>
+            </ol>
+            <div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>GET /api/product/{id}
+</code></pre>
+                <div class="zeroclipboard-container position-absolute right-0 top-0">
+                    <clipboard-copy aria-label="Copy"
+                                    class="ClipboardButton btn js-clipboard-copy m-2 p-0 tooltipped-no-delay"
+                                    data-copy-feedback="Copied!" data-tooltip-direction="w"
+                                    value="GET /api/product/{id}" tabindex="0" role="button">
+                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                             data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon m-2">
+                            <path fill-rule="evenodd"
+                                  d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                            <path fill-rule="evenodd"
+                                  d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                        </svg>
+                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                             data-view-component="true"
+                             class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none m-2">
+                            <path fill-rule="evenodd"
+                                  d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path>
+                        </svg>
+                    </clipboard-copy>
+                </div>
+            </div>
+            <h2 dir="auto"><a id="user-content-contact" class="anchor" aria-hidden="true" href="#contact">
+                    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                         aria-hidden="true">
+                        <path fill-rule="evenodd"
+                              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+                    </svg>
+                </a>Contact
+            </h2>
+            <blockquote>
+                <p dir="auto">If you have any questions, please email at <a href="mailto:arbislimen@gmail.com">arbislimen@gmail.com</a>.
+                </p>
+            </blockquote>
+        </article>
+    </div>
+
+{% endblock %}
