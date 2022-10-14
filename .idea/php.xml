@@ -133,6 +133,7 @@
       <path value="$PROJECT_DIR$/Backend-Symfony/vendor/jms/metadata" />
       <path value="$PROJECT_DIR$/Backend-Symfony/vendor/jms/serializer-bundle" />
       <path value="$PROJECT_DIR$/Backend-Symfony/vendor/jms/serializer" />
+      <path value="$PROJECT_DIR$/Backend-Symfony/vendor/nelmio/cors-bundle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1">
