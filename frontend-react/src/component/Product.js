@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom'
+
 function Product({id, productName, price, imageUrl, averageScore, category}) {
 
     return (
@@ -12,6 +14,11 @@ function Product({id, productName, price, imageUrl, averageScore, category}) {
                         <h6>Average score: {averageScore}</h6>
                         <h6>Category: {category}</h6>
                     </div>
+                </div>
+                <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div className="text-center"><Link to={`/show/${id}`}>
+                        <button className='btn btn-outline-dark mt-auto'>Detail</button>
+                    </Link></div>
                 </div>
             </div>
         </div>
