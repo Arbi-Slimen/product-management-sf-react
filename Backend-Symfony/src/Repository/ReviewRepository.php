@@ -48,6 +48,19 @@ class ReviewRepository extends ServiceEntityRepository
         }
     }
 
+    /**
+     * @return Integer averageScore of Product
+     */
+    public function averageScore($id)
+    {
+        return $this->createQueryBuilder('r')
+            ->select('AVG(r.value) as averageScore')
+            ->where('r.product = :id')
+            ->setParameter('id', $id)
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
+
     // /**
     //  * @return Review[] Returns an array of Review objects
     //  */

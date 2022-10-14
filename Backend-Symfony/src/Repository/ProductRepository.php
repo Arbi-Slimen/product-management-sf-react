@@ -47,6 +47,43 @@ class ProductRepository extends ServiceEntityRepository
         }
     }
 
+    /**
+     * @return Product[] Returns an array of Product objects
+     */
+    public function findAndPagination($page, $limit, $productName, $category, $price)
+    {
+        return $this->createQueryBuilder('p')
+            ->join('p.category', 'c')
+            ->where('p.productName like :productName')
+            ->setParameter('productName', '%' . $productName . '%')
+            ->andWhere('p.price > :price')
+            ->setParameter('price', $price)
+            ->andWhere('c.category like :category')
+            ->setParameter('category', '%' . $category . '%')
+            ->setFirstResult(($page - 1) * $limit)
+            ->setMaxResults($limit)
+            ->getQuery()
+            ->getResult();
+    }
+
+    /**
+     * @return Integer count of Product objects
+     */
+    public function countProducts($productName, $category, $price)
+    {
+        return $this->createQueryBuilder('p')
+            ->select('count(p)')
+            ->join('p.category', 'c')
+            ->where('p.productName like :productName')
+            ->setParameter('productName', '%' . $productName . '%')
+            ->andWhere('p.price > :price')
+            ->setParameter('price', $price)
+            ->andWhere('c.category like :category')
+            ->setParameter('category', '%' . $category . '%')
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
+
     // /**
     //  * @return Product[] Returns an array of Product objects
     //  */

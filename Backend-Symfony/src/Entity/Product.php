@@ -6,6 +6,10 @@ use App\Repository\ProductRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation as Serializer;
+use JMS\Serializer\Annotation\Groups;
+use JMS\Serializer\Annotation\VirtualProperty;
+use JMS\Serializer\Annotation\SerializedName;
 
 
 /**
@@ -17,7 +21,7 @@ class Product
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups({"getProducts","getDetailProduct"})
+     * @Groups({"getProducts"})
      */
     private $id;
 
@@ -28,6 +32,7 @@ class Product
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"getProducts"})
      */
     private $productName;
 
@@ -38,6 +43,7 @@ class Product
 
     /**
      * @ORM\Column(type="float")
+     * @Groups({"getProducts"})
      */
     private $price;
 
@@ -48,6 +54,7 @@ class Product
 
     /**
      * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="products")
+     * @Groups({"getProducts"})
      */
     private $category;
 
@@ -167,6 +174,20 @@ class Product
         $this->dateInsertion = $dateInsertion;
 
         return $this;
+    }
+
+    /**
+     * @VirtualProperty()
+     * @SerializedName("averageScore")
+     * @Groups({"averageScore"})
+     */
+    public function getAverageScore()
+    {
+        global $kernel;
+        $em = $kernel->getContainer()->get('doctrine')->getManager();
+        $averageScore = $em->getRepository(Review::class)->averageScore($this->id);
+        return number_format($averageScore, 2, '.', '');
+
     }
 
 }
