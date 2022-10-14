@@ -133,6 +133,10 @@
       <excludeFolder url="file://$MODULE_DIR$/Backend-Symfony/vendor/sebastian/recursion-context" />
       <excludeFolder url="file://$MODULE_DIR$/Backend-Symfony/vendor/sebastian/cli-parser" />
       <excludeFolder url="file://$MODULE_DIR$/Backend-Symfony/vendor/symfony/web-server-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/Backend-Symfony/vendor/phpstan/phpdoc-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/Backend-Symfony/vendor/jms/metadata" />
+      <excludeFolder url="file://$MODULE_DIR$/Backend-Symfony/vendor/jms/serializer-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/Backend-Symfony/vendor/jms/serializer" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

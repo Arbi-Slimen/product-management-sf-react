@@ -129,6 +129,10 @@
       <path value="$PROJECT_DIR$/Backend-Symfony/vendor/sebastian/recursion-context" />
       <path value="$PROJECT_DIR$/Backend-Symfony/vendor/sebastian/cli-parser" />
       <path value="$PROJECT_DIR$/Backend-Symfony/vendor/symfony/web-server-bundle" />
+      <path value="$PROJECT_DIR$/Backend-Symfony/vendor/phpstan/phpdoc-parser" />
+      <path value="$PROJECT_DIR$/Backend-Symfony/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/Backend-Symfony/vendor/jms/serializer-bundle" />
+      <path value="$PROJECT_DIR$/Backend-Symfony/vendor/jms/serializer" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1">
