@@ -3,10 +3,11 @@
 namespace App\Entity;
 
 use App\Repository\ProductRepository;
+use App\Services\AverageScore;
+use App\Entity\Review;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use JMS\Serializer\Annotation as Serializer;
 use JMS\Serializer\Annotation\Groups;
 use JMS\Serializer\Annotation\VirtualProperty;
 use JMS\Serializer\Annotation\SerializedName;
@@ -21,51 +22,55 @@ class Product
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups({"getProducts"})
+     * @Groups({"getProducts","getDetailProduct"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="datetime", length=255)
+     * @Groups({"getDetailProduct"})
      */
     private $dateInsertion;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"getProducts"})
+     * @Groups({"getProducts","getDetailProduct"})
      */
     private $productName;
 
     /**
      * @ORM\Column(type="text")
+     * @Groups({"getDetailProduct"})
      */
     private $description;
 
     /**
      * @ORM\Column(type="float")
-     * @Groups({"getProducts"})
+     * @Groups({"getProducts","getDetailProduct"})
      */
     private $price;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"getProducts","getDetailProduct"})
      */
     private $imageUrl;
 
     /**
      * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="products")
-     * @Groups({"getProducts"})
+     * @Groups({"getProducts","getDetailProduct"})
      */
     private $category;
 
     /**
      * @ORM\OneToMany(targetEntity=Review::class, mappedBy="product")
+     * @Groups({"getDetailProduct"})
      */
     private $reviews;
 
     public function __construct()
     {
-        $this->dateInsertion=new \DateTime();
+        $this->dateInsertion = new \DateTime();
         $this->reviews = new ArrayCollection();
     }
 
@@ -176,6 +181,7 @@ class Product
         return $this;
     }
 
+
     /**
      * @VirtualProperty()
      * @SerializedName("averageScore")
@@ -189,5 +195,4 @@ class Product
         return number_format($averageScore, 2, '.', '');
 
     }
-
 }

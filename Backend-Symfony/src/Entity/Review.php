@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ReviewRepository;
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation\Groups;
 
 
 /**
@@ -15,16 +16,19 @@ class Review
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"getDetailProduct"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups({"getDetailProduct"})
      */
     private $value;
 
     /**
      * @ORM\Column(type="text")
+     * @Groups({"getDetailProduct"})
      */
     private $content;
 

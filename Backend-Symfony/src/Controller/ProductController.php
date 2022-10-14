@@ -118,4 +118,25 @@ class ProductController extends AbstractController
 
         return new JsonResponse($jsonProductList, Response::HTTP_OK, [], true);
     }
+
+    /**
+     * Return the detailed product sheet
+     * @Route("/api/product/{id}", name="getDetailProduct", methods={"GET"} )
+     * @param Product $product
+     * @param SerializerInterface $serializer
+     * @param TagAwareCacheInterface $cachePool
+     * @return JsonResponse
+     */
+    public function getDetailProduct(Product $product, SerializerInterface $serializer, TagAwareCacheInterface $cachePool): JsonResponse
+    {
+        $idCache = "getDetailProduct-" . $product->getId();
+
+        $jsonProduct = $cachePool->get($idCache, function (ItemInterface $item) use ($product, $serializer) {
+            $item->tag('productsCache');
+            $context = SerializationContext::create()->setGroups(['getDetailProduct', 'averageScore']);
+            return $serializer->serialize($product, 'json', $context);
+        });
+
+        return new JsonResponse($jsonProduct, Response::HTTP_OK, [], true);
+    }
 }
