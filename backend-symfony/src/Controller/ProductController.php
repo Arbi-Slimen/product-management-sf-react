@@ -88,20 +88,20 @@ class ProductController extends AbstractController
         if (empty($page))
             $page = 1;
         else
-            if (!is_numeric($page))
-                return new JsonResponse('Error Type Page.', Response::HTTP_BAD_REQUEST, [], true);
+            if (!is_numeric($page) or $page<1)
+                return new JsonResponse(json_encode(['message'=>'Page value must be >=1.']), Response::HTTP_BAD_REQUEST, [], true);
 
         if (empty($limit))
             $limit = 12;
         else
-            if (!is_numeric($limit))
-                return new JsonResponse('Error Type Limit.', Response::HTTP_BAD_REQUEST, [], true);
+            if (!is_numeric($limit) or $limit<1)
+                return new JsonResponse(json_encode(['message'=>'Limit value must be >=1.']), Response::HTTP_BAD_REQUEST, [], true);
 
-        if (empty($price) or $price < 0)
+        if (empty($price))
             $price = -1;
         else
-            if (!is_numeric($price))
-                return new JsonResponse('Error Type Price.', Response::HTTP_BAD_REQUEST, [], true);
+            if (!is_numeric($price) or $price<0)
+                return new JsonResponse(json_encode(['message'=>'Price value must be >=0.']), Response::HTTP_BAD_REQUEST, [], true);
 
         $idCache = "getProducts-" . $page . "-" . $limit . "-" . $productName . "-" . $category . "-" . $price;
         $jsonProductList = $cachePool->get($idCache, function (ItemInterface $item) use ($productRepository, $page, $limit, $productName, $category, $price, $serializer) {
