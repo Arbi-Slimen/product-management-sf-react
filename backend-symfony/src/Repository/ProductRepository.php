@@ -50,16 +50,22 @@ class ProductRepository extends ServiceEntityRepository
     /**
      * @return Product[] Returns an array of Product objects
      */
-    public function findAndPagination($page, $limit, $productName, $category, $price)
+    public function filterAndPagination($page, $limit, $productName, $category, $price, $averageScore)
     {
+
         return $this->createQueryBuilder('p')
-            ->join('p.category', 'c')
+            ->select('p')
+            ->leftJoin('p.category', 'c')
+            ->leftJoin('p.reviews', 'r')
             ->where('p.productName like :productName')
             ->setParameter('productName', '%' . $productName . '%')
             ->andWhere('p.price > :price')
             ->setParameter('price', $price)
             ->andWhere('c.category like :category')
             ->setParameter('category', '%' . $category . '%')
+            ->Having('AVG(r.value)> :averageScore')
+            ->setParameter('averageScore', $averageScore)
+            ->groupBy('p.id')
             ->setFirstResult(($page - 1) * $limit)
             ->setMaxResults($limit)
             ->getQuery()
@@ -69,19 +75,23 @@ class ProductRepository extends ServiceEntityRepository
     /**
      * @return Integer count of Product objects
      */
-    public function countProducts($productName, $category, $price)
+    public function countProducts($productName, $category, $price, $averageScore)
     {
-        return $this->createQueryBuilder('p')
-            ->select('count(p)')
-            ->join('p.category', 'c')
+        return count($this->createQueryBuilder('p')
+            ->select('p')
+            ->leftJoin('p.category', 'c')
+            ->leftJoin('p.reviews', 'r')
             ->where('p.productName like :productName')
             ->setParameter('productName', '%' . $productName . '%')
             ->andWhere('p.price > :price')
             ->setParameter('price', $price)
             ->andWhere('c.category like :category')
             ->setParameter('category', '%' . $category . '%')
+            ->having('AVG(r.value) > :averageScore')
+            ->setParameter('averageScore', $averageScore)
+            ->groupBy('p.id')
             ->getQuery()
-            ->getSingleScalarResult();
+            ->getResult());
     }
 
     // /**
