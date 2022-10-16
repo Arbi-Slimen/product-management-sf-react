@@ -26,7 +26,6 @@ Configure the database in the .env file.
 
 DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=8&charset=utf8mb4"
 ```
-$ php bin/console doctrine:database:create
 $ php bin/console doctrine:schema:update --force
 $ php bin/console server:start
 ```
