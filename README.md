@@ -21,10 +21,16 @@ $ git clone https://github.com/Arbi-Slimen/PROJECT-ATS-DIGITAL.git
 ```
 $ cd backend-symfony
 $ composer update
+```
+Configure the database in the .env file.
+
+DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=8&charset=utf8mb4"
+```
+$ php bin/console doctrine:database:create
 $ php bin/console doctrine:schema:update --force
 $ php bin/console server:start
 ```
-Access the application with the URL http://localhost:8000.
+Access the application with the URL http://127.0.0.1:8000.
 
 2. The Front-end part with React.js.
 ```
@@ -32,12 +38,14 @@ $ cd frontend-react
 $ npm install
 $ npm start
 ```
-Access the application with the URL http://localhost:3000.
+Access the application with the URL http://127.0.0.1:3000.
 ## Usage
 REST API endpoints :
 1. Import the products list into the database.
  ```
  POST /api/products
+ 
+ example: POST http://127.0.0.1:8000/api/products
 ```
 2. Return products list based on pagination and filters.
  ```
