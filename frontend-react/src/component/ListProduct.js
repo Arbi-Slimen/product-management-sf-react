@@ -1,5 +1,4 @@
-import Cart from "./Product";
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import Page from "./Page";
 import {Loader} from "./Loader";
 import {useFetch} from "../api/api";
