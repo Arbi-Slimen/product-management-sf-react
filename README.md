@@ -20,7 +20,7 @@ $ git clone https://github.com/Arbi-Slimen/PROJECT-ATS-DIGITAL.git
 1. The Back-end part with Symfony.
 ```
 $ cd backend-symfony
-$ composer update
+$ composer update //php composer.phar update
 ```
 Configure the database in the .env file.
 
