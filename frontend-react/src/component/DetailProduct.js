@@ -4,7 +4,7 @@ import {useParams} from 'react-router-dom'
 
 function DetailProduct() {
     const {id} = useParams()
-    const {data, isLoading, error} = useFetch(`http://127.0.0.1:8000/api/product/${id}`, [])
+    const {data, isLoading, error} = useFetch(`http://127.0.0.1:8000/api/product/${id}`, [id])
 
     if (error) {
         return <span>Oups problème de fetch</span>

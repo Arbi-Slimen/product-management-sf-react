@@ -10,14 +10,15 @@ function ListProduct() {
     const [page, updatePage] = useState(1)
     const [productName, updateProductName] = useState('');
     const [category, updateCategory] = useState('');
-    const [price, updatePrice] = useState(0);
+    const [price, updatePrice] = useState('');
+    const [averageScore, updateAverageScore] = useState('');
     const limit = 12
 
     const {
         data,
         isLoading,
         error
-    } = useFetch(`http://127.0.0.1:8000/api/products?page=${page}&limit=${limit}&productName=${productName}&category=${category}&price=${price}`, [page, limit, productName, category, price])
+    } = useFetch(`http://127.0.0.1:8000/api/products?page=${page}&limit=${limit}&productName=${productName}&category=${category}&price=${price}&averageScore=${averageScore}`, [page, limit, productName, category, price, averageScore])
 
     if (error) {
         return <span style={{display: 'flex', justifyContent: 'center'}}>Oups problème de fetch</span>
@@ -28,14 +29,15 @@ function ListProduct() {
         updateProductName(document.form.product_name.value)
         updateCategory(document.form.category.value)
         updatePrice(document.form.price.value)
+        updateAverageScore(document.form.average_score.value)
     }
 
     function handleClear() {
         updateProductName('')
         updateCategory('')
-        updatePrice(0)
+        updatePrice('')
+        updateAverageScore('')
     }
-
 
     return (
         <div>
@@ -74,6 +76,12 @@ function ListProduct() {
                             <div className="form-group">
                                 <label>Price</label><span className="help-block">price higher than the input.</span>
                                 <input type="number" name='price' defaultValue={price} className="form-control"
+                                       min='0'/>
+                            </div>
+                            <div className="form-group">
+                                <label>Average score</label><span className="help-block">averageScore higher than the input.</span>
+                                <input type="number" name='average_score' defaultValue={averageScore}
+                                       className="form-control"
                                        min='0'/>
                             </div>
                             <div className="form-group">
