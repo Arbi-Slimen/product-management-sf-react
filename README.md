@@ -49,8 +49,9 @@ REST API endpoints :
  filters:    productName
              category
              price    //price higher than the input
+             averageScore //averageScore higher than the input
              
-example: GET http://localhost:8000/api/products?page=1&limit=10&productName=Chicken&category=Fantastic&price=200
+example: GET http://127.0.0.1:8000/api/products?page=1&limit=12&productName=pizza&category=Practical&price=200&averageScore=3
 ```
 3. Return the detailed product sheet.
  ```
