@@ -11,7 +11,7 @@ The objective is to implement a REST API that manages a product catalog.
 
 ## Technologies
 The project consists of two parts :
-1. The Back-end part is developed with the framework Symfony version 4.4 that implements the RSET API.
+1. The Back-end part is developed with the framework Symfony version 4.4 that implements the REST API.
 2. The Front-end part is developed with React.js version 18 that implements the views powered by REST API.
 ## Installation
 ```
