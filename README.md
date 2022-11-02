@@ -7,8 +7,6 @@
 ## General Info
 The objective is to implement a REST API that manages a product catalog.
 
-![Image text](https://www.ats-digital.com/wp-content/themes/ats-digital-theme/theme/images/logos/Logo-T.png)
-
 ## Technologies
 The project consists of two parts :
 1. The Back-end part is developed with the framework Symfony version 4.4 that implements the REST API.
