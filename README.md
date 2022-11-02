@@ -13,7 +13,7 @@ The project consists of two parts :
 2. The Front-end part is developed with React.js version 18 that implements the views powered by REST API.
 ## Installation
 ```
-$ git clone https://github.com/Arbi-Slimen/PROJECT-ATS-DIGITAL.git
+$ git clone https://github.com/Arbi-Slimen/product-management-sf-react.git
 ```
 1. The Back-end part with Symfony.
 ```
