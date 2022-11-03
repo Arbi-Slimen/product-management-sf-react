@@ -33,6 +33,7 @@ Access the application with the URL http://127.0.0.1:8000.
 ```
 $ cd frontend-react
 $ npm install
+$ npm run build
 $ npm start
 ```
 Access the application with the URL http://127.0.0.1:3000.
