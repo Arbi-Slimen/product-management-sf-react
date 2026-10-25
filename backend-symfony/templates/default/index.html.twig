@@ -2,6 +2,30 @@
 
 {% block title %}README{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.2.0/github-markdown-light.min.css">
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+        .markdown-body .snippet-clipboard-content {
+            position: relative;
+        }
+        .markdown-body .zeroclipboard-container {
+            display: none;
+        }
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+        }
+    </style>
+{% endblock %}
+
 {% block body %}
     <div id="readme" class="Box-body readme blob js-code-block-container p-5 p-xl-6 gist-border-0">
         <article class="markdown-body entry-content container-lg" itemprop="text">
